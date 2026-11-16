@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kerala Trip Planner | 18–24 November 2026</title>
+<style>
+:root{--green:#176b55;--green2:#e8f4ef;--ink:#20312d;--muted:#71817b;--cream:#f7f8f4;--line:#e4eae5;--orange:#e58a43;--white:#fff;--shadow:0 8px 28px rgba(28,58,47,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.hero{background:linear-gradient(120deg,#123f35,#23765f);color:white;padding:34px max(22px,calc((100vw - 1180px)/2)) 30px}
+.topline{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:.3px}.pill{border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:6px 11px;font-size:12px;background:rgba(255,255,255,.12)}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:28px 0 10px}.hero p{color:#e0eee8;margin:0;max-width:700px}.hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.stat{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);padding:10px 14px;border-radius:13px;min-width:125px}.stat b{display:block;font-size:17px}.stat span{font-size:12px;color:#d8e9e2}
+.wrap{max-width:1180px;margin:24px auto;padding:0 18px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:18px}.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:10px;padding:9px 13px;font-weight:650}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn.soft{background:var(--green2);color:var(--green);border-color:#d4e9df}.btn.danger{color:#a43c31}.btn.small{padding:6px 9px;font-size:12px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.panel,.card{background:white;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.sidebar{padding:16px;position:sticky;top:14px}.side-title{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:2px 0 12px}.day-nav{display:flex;flex-direction:column;gap:6px}.day-btn{border:0;background:transparent;text-align:left;padding:11px;border-radius:11px;color:var(--ink);display:flex;gap:10px;align-items:center}.day-btn.active{background:var(--green2);color:var(--green);font-weight:750}.day-num{width:32px;height:32px;border-radius:9px;background:#f0f3ef;display:grid;place-items:center;font-weight:800;font-size:12px;flex-shrink:0}.day-btn.active .day-num{background:var(--green);color:white}.day-btn small{display:block;color:var(--muted);font-weight:500}.main{min-width:0}.day-head{padding:22px;margin-bottom:14px}.eyebrow{color:var(--green);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.day-head h2{margin:5px 0;font-size:27px}.sub{color:var(--muted)}.day-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tag{background:#f1f5f1;border-radius:99px;padding:6px 10px;font-size:12px;color:#50625a}.section{padding:18px;margin-bottom:14px}.section h3{margin:0 0 14px;font-size:17px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.table-wrap{overflow-x:auto}.schedule{width:100%;border-collapse:collapse;min-width:680px}.schedule th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:9px;border-bottom:1px solid var(--line)}.schedule td{padding:10px 9px;border-bottom:1px solid #edf0ed;vertical-align:top}.schedule tr:last-child td{border-bottom:0}.schedule input,.schedule select{width:100%;min-width:90px;border:1px solid transparent;background:#f7f9f6;border-radius:7px;padding:7px;color:var(--ink)}.schedule input:focus,.schedule select:focus{outline:2px solid #b9dacc;background:white}.schedule .time{min-width:112px}.schedule .place{min-width:145px}.schedule .duration{min-width:90px}.schedule .actions{white-space:nowrap}.muted{color:var(--muted);font-size:12px}.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.check{display:flex;gap:9px;align-items:flex-start;padding:10px;border:1px solid var(--line);border-radius:10px}.check input{accent-color:var(--green);margin-top:4px}.check.done span{text-decoration:line-through;color:#91a098}.progress{height:7px;background:#edf2ee;border-radius:99px;overflow:hidden;margin:8px 0 13px}.progress span{height:100%;display:block;background:var(--green);width:0;transition:width .2s}.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}.mini{padding:15px}.mini b{font-size:22px;display:block}.mini span{color:var(--muted);font-size:12px}.maplinks{display:flex;gap:8px;flex-wrap:wrap}.maplinks a{color:var(--green);background:var(--green2);border-radius:9px;padding:8px 11px;text-decoration:none;font-size:13px;font-weight:650}.expense-row{display:grid;grid-template-columns:1.2fr 1fr .8fr .8fr auto;gap:8px;margin:9px 0}.field{width:100%;padding:9px;border:1px solid var(--line);border-radius:9px;background:white}.expense-summary{display:flex;gap:20px;flex-wrap:wrap;padding:12px;background:#f5f8f5;border-radius:10px;margin-top:12px}.expense-summary b{font-size:18px}.note{background:#fff8ec;border:1px solid #f4e2c6;color:#76552c;padding:12px;border-radius:11px;font-size:13px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:22px}
+.live-panel{padding:17px 20px;margin-bottom:14px;border-left:4px solid var(--green)}.live-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}.live-clock{font-weight:750;color:var(--green);font-variant-numeric:tabular-nums}.live-current{font-size:19px;font-weight:800;margin:8px 0 3px}.live-next{color:var(--muted);font-size:13px}.activity-row.current-activity td{background:#e8f4ef!important}.activity-row.current-activity td:first-child{box-shadow:inset 4px 0 var(--green)}.readonly-note{white-space:pre-wrap;line-height:1.65}.modal-back{position:fixed;inset:0;background:#14231fcc;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal{background:white;border-radius:16px;padding:22px;max-width:480px;width:100%}.modal h3{margin-top:0}.modal .field{margin:6px 0 12px}.hidden{display:none!important}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static}.day-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.overview-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.hero{padding:25px 18px}.wrap{padding:0 12px;margin:15px auto}.day-nav{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}.overview-grid{grid-template-columns:1fr 1fr}.expense-row{grid-template-columns:1fr 1fr}.expense-row .wide{grid-column:span 2}.day-head h2{font-size:23px}}
+@media print{body{background:white}.hero{background:#176b55!important;padding:18px;print-color-adjust:exact}.toolbar,.sidebar,.no-print,.day-nav{display:none!important}.wrap{max-width:none;margin:0;padding:0}.layout{display:block}.panel,.card{box-shadow:none;border:0}.section,.day-head{break-inside:avoid;padding:12px}.schedule{min-width:0}.schedule input,.schedule select{border:0;background:transparent;padding:2px}.footer{display:none}.main{display:block}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="topline"><div class="brand">🌿 KERALA • TRIP PLANNER</div><span class="pill">18–24 NOVEMBER 2026 · 10 TRAVELLERS</span></div>
+ <h1>Seven days. One beautiful journey.</h1>
+ <p>Your shared Kerala itinerary — follow each day, check the live activity, view route links and keep the whole group organised.</p>
+</header>
+<div class="wrap">
+ <div class="toolbar no-print"><button class="btn primary" onclick="window.print()">⬇ Print / Save PDF</button><span class="muted">Shared read-only itinerary · Updates are published by the trip owner</span></div>
+ <div class="layout">
+  <aside class="panel sidebar">
+   <div class="side-title">Your itinerary</div>
+   <nav class="day-nav" id="dayNav"></nav>
+   <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+   <div class="side-title">Trip tools</div>
+   <button class="day-btn" onclick="showTools('checklist')">☑ Booking checklist</button>
+   <button class="day-btn" onclick="showTools('expenses')">₹ Expense tracker</button>
+   <button class="day-btn" onclick="showTools('overview')">⌖ Full route overview</button>
+   <p class="muted">Choose a day to view its timetable, current activity, route and published reminders.</p>
+  </aside>
+  <main class="main" id="mainContent"></main>
+ </div>
+ <div class="footer">Kerala Trip Planner · Shared read-only itinerary · Maintained by the trip owner</div>
+</div>
+<script>
+const initialDays=[
+{date:"Wed, 18 Nov 2026",title:"Kochi → Athirappilly → Munnar",stay:"Munnar · Night 1 of 2",summary:"Arrival in Kochi, Fort Kochi and Athirappilly on the way to Munnar.",items:[
+["07:00 AM","Arrive at Kochi Airport","Arrival formalities","Flight arrival; collect luggage and meet the driver."],
+["08:00 AM","Fort Kochi","2 hours","Chinese fishing nets, Fort Kochi streets and waterfront. Keep this visit short."],
+["10:00 AM","Drive towards Athirappilly","2–2.5 hours","Travel estimate; confirm road and traffic with driver."],
+["12:30 PM","Athirappilly Waterfalls","1–1.5 hours","Viewpoints and lunch nearby. Wear comfortable shoes."],
+["02:00 PM","Drive to Munnar","4–5 hours","Long hill drive; include a comfort break."],
+["07:00 PM","Munnar hotel check-in","Evening","Dinner and rest."]
+]},
+{date:"Thu, 19 Nov 2026",title:"Munnar sightseeing + Kolukkumalai sunrise",stay:"Munnar · Night 2 of 2",summary:"Early sunrise jeep experience followed by Munnar's tea gardens, dam and lake.",items:[
+["03:00 AM","Leave for Suryanelli jeep point","Travel","Confirm pickup point and jeep arrangements the previous evening."],
+["04:00 AM","Kolukkumalai sunrise safari","2–2.5 hours","Book suitable jeeps for 10 people; Urbania does not go up the rough final route."],
+["07:00 AM","Breakfast","45 minutes","Return and have breakfast."],
+["09:00 AM","Tea garden / Tea Museum","1–1.5 hours","Choose a tea estate viewpoint or museum depending on energy."],
+["11:00 AM","Mattupetty Dam","45–60 minutes","Lake views; boating subject to availability."],
+["12:30 PM","Lunch","1 hour","Lunch break."],
+["02:00 PM","Echo Point","30–45 minutes","Short photo stop if time permits."],
+["03:00 PM","Kundala Lake","45–60 minutes","Enjoy the lake and available boating options."],
+["05:00 PM","Return to hotel","Evening","Tea, shopping or rest; dinner at hotel."]
+]},
+{date:"Fri, 20 Nov 2026",title:"Munnar → Vagamon → Thekkady",stay:"Thekkady · 1 night",summary:"Scenic transfer day with Vagamon Pine Forest and Parunthumpara viewpoint.",items:[
+["06:30 AM","Breakfast at Munnar hotel","45 minutes","Check out and load luggage."],
+["07:30 AM","Drive Munnar to Vagamon","Approx. 3–3.5 hours","Travel estimate only; winding hill roads may add time."],
+["10:45 AM","Vagamon Pine Forest","60–75 minutes","Walk among the tall pine trees and take group photographs."],
+["12:00 PM","Lunch in Vagamon","45 minutes","Choose a restaurant with parking for the Urbania."],
+["12:45 PM","Vagamon Meadows (optional)","30 minutes","Skip if running late."],
+["01:15 PM","Drive towards Parunthumpara","Approx. 1.5 hours","Confirm route and road condition with driver."],
+["02:45 PM","Parunthumpara Viewpoint","30–45 minutes","Check weather and visibility; stay away from cliff edges."],
+["03:30 PM","Drive to Thekkady","Approx. 1.5 hours","Proceed to hotel."],
+["05:00 PM","Thekkady hotel check-in","1 hour","Freshen up and rest."],
+["07:00 PM","Kathakali performance","1 hour","Confirm show timing and reserve 10 seats."],
+["08:15 PM","Dinner","Evening","Inform hotel if dinner service timing needs adjustment."]
+]},
+{date:"Sat, 21 Nov 2026",title:"Thekkady → Periyar → Alleppey",stay:"Alleppey · 1 night",summary:"Periyar boat experience, optional responsible elephant observation and Alleppey backwaters.",items:[
+["06:30 AM","Breakfast / check out","45 minutes","Confirm boat ticket and departure arrangements."],
+["07:30 AM","Periyar Lake boat safari","1.5 hours","Reserve 10 seats together if possible; wildlife sightings are not guaranteed."],
+["09:15 AM","Responsible elephant observation (optional)","45 minutes","Choose an ethical observation experience; avoid rides or forced bathing."],
+["10:15 AM","Drive to Alleppey","Approx. 4–5 hours","Include a lunch / comfort break en route."],
+["02:30 PM","Alleppey hotel check-in / lunch","1 hour","Confirm luggage drop and boat pickup."],
+["03:30 PM","Private shikara / canoe cruise","2 hours","Reserve capacity for all 10 people; confirm route and life jackets."],
+["05:30 PM","Backwater sunset / relax","Evening","Return to hotel and dinner."]
+]},
+{date:"Sun, 22 Nov 2026",title:"Alleppey → Jatayu → Kollam",stay:"Kollam · Night 1 of 2",summary:"Travel north to Jatayu Earth's Center, then continue to Kollam.",items:[
+["07:30 AM","Breakfast and check out","45 minutes","Settle hotel bill and load luggage."],
+["08:15 AM","Drive to Jatayu Earth's Center","Approx. 3 hours","Check traffic and opening arrangements."],
+["11:30 AM","Jatayu Earth's Center","1.5–2 hours","Check entry, cable car operation, activity availability and ticket timings."],
+["01:30 PM","Lunch","1 hour","Lunch near Jatayu or on the way."],
+["02:30 PM","Drive to Kollam","Approx. 1 hour","Proceed to hotel."],
+["03:30 PM","Kollam hotel check-in","1 hour","Rest and refresh."],
+["05:00 PM","Optional Thangassery Lighthouse / beach","1–1.5 hours","Only if lighthouse opening hours and energy allow."],
+["07:00 PM","Dinner","Evening","Overnight in Kollam."]
+]},
+{date:"Mon, 23 Nov 2026",title:"Kollam → Padmanabhaswamy Temple → Kovalam → Varkala",stay:"Kollam · Night 2 of 2",summary:"A full-day southern Kerala excursion. Prioritise temple timing and avoid overloading the day.",items:[
+["06:30 AM","Breakfast and leave Kollam","45 minutes","Confirm temple dress rules and opening schedule in advance."],
+["08:30 AM","Sree Padmanabhaswamy Temple","1–1.5 hours","Entry is restricted to Hindus; dress code and darshan timings must be checked with the temple."],
+["10:15 AM","Drive to Kovalam","Approx. 30–45 minutes","Travel estimate."],
+["11:00 AM","Lighthouse Beach / Hawa Beach","1.5–2 hours","Choose the beaches you most want to visit; check lighthouse access."],
+["01:00 PM","Lunch","1 hour","Lunch around Kovalam."],
+["02:00 PM","Drive to Varkala","Approx. 1–1.5 hours","Allow extra time for traffic."],
+["03:30 PM","Varkala Cliff and Papanasam Beach","1.5–2 hours","Enjoy the cliff walk, shops and beach views; check sea conditions."],
+["05:30 PM","Return to Kollam","Approx. 1–1.5 hours","Dinner and overnight stay."]
+]},
+{date:"Tue, 24 Nov 2026",title:"Kollam → Kochi Airport",stay:"Departure · 7:00 PM flight",summary:"Keep this day for the airport transfer. Avoid adding sightseeing stops.",items:[
+["07:00 AM","Breakfast and check out","45 minutes","Check room, luggage and hotel bill."],
+["08:00 AM","Depart Kollam for Kochi Airport","Approx. 4–5.5 hours","Travel estimate; traffic, roadworks and breaks can affect timing."],
+["01:30 PM","Target airport arrival","Buffer","Aim to reach early; allow additional time for an international flight."],
+["07:00 PM","Flight departure","Departure","Confirm airline check-in and terminal details."]
+]}
+];
+const defaultChecklist=["Confirm all hotel names, addresses and check-in times","Confirm Urbania driver, route and luggage capacity","Book Kolukkumalai jeeps for 10 people","Confirm Periyar boat tickets for 10 people","Book Kathakali show for 10 people","Confirm spice plantation visit (if included)","Book Alleppey private shikara / canoe for 10","Check Jatayu entry and cable car operation","Confirm Padmanabhaswamy Temple entry and dress code","Save flight tickets and airport terminal details","Share itinerary and driver contact with the group"];
+let state=loadState(), activeDay=0, toolView="day", modalDay=0;
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function loadState(){return {days:clone(initialDays),checklist:defaultChecklist.map(t=>({text:t,done:false})),expenses:[]}}
+function save(){}
+function money(n){return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(Number(n)||0)}
+function updateStats(){}
+function renderNav(){document.getElementById("dayNav").innerHTML=state.days.map((d,i)=>`<button class="day-btn ${toolView==="day"&&activeDay===i?"active":""}" onclick="openDay(${i})"><span class="day-num">${i+1}</span><span><strong>Day ${i+1}</strong><small>${d.date.split(", ")[1]} · ${d.title.split("→").pop().trim()}</small></span></button>`).join("")}
+function openDay(i){activeDay=i;toolView="day";render()}
+function showTools(v){toolView=v;render()}
+
+function parseClock(value){let m=String(value).match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);if(!m)return null;let h=Number(m[1])%12;if(m[3].toUpperCase()==="PM")h+=12;return h*60+Number(m[2])}
+function dateForDay(d){let m=d.date.match(/(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})/);if(!m)return null;return new Date(Number(m[3]),["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].indexOf(m[2]),Number(m[1]))}
+function tripDayIndex(now){let dates=state.days.map(dateForDay);for(let i=0;i<dates.length;i++){let next=new Date(dates[i]);next.setDate(next.getDate()+1);if(now>=dates[i]&&now<next)return i}if(now<dates[0])return 0;return state.days.length-1}
+function updateLiveStatus(){let panel=document.getElementById("livePanel");if(!panel)return;let now=new Date(),d=state.days[activeDay],tripDate=dateForDay(d),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),target=new Date(tripDate.getFullYear(),tripDate.getMonth(),tripDate.getDate());let clock=now.toLocaleString("en-IN",{weekday:"short",day:"2-digit",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:true});let title="",detail="",currentIndex=-1,nextIndex=-1;
+ if(today<target){let days=Math.ceil((target-today)/86400000);title="Your trip is coming up";detail=`Day ${activeDay+1} begins in ${days} day${days===1?"":"s"}. The timetable below shows the planned activities.`}
+ else if(today>target){title="This trip day has ended";detail="You are viewing the published timetable for this date."}
+ else {let mins=now.getHours()*60+now.getMinutes(),times=d.items.map(x=>parseClock(x[0]));for(let i=0;i<times.length;i++){if(times[i]!==null&&times[i]<=mins)currentIndex=i;if(times[i]!==null&&times[i]>mins&&nextIndex===-1)nextIndex=i}
+ if(currentIndex===-1){title="Today's activities have not started";detail=nextIndex>=0?`Next: ${d.items[nextIndex][0]} · ${d.items[nextIndex][1]}`:"Check the timetable for today's plan."}
+ else if(nextIndex===-1){title="Today's scheduled activities are complete";detail="You have reached the last scheduled item for this day. Check the timetable for the full plan.";currentIndex=-1}
+ else {title="Current planned activity";detail=`${d.items[currentIndex][0]} · ${d.items[currentIndex][1]} — ${d.items[currentIndex][3]||d.items[currentIndex][2]}`;detail+=` Next: ${d.items[nextIndex][0]} · ${d.items[nextIndex][1]}.`}
+ }
+ panel.innerHTML=`<div class="live-top"><span class="eyebrow">LIVE TRIP STATUS · DAY ${activeDay+1}</span><span class="live-clock">🕒 ${clock}</span></div><div class="live-current">${esc(title)}</div><div class="live-next">${esc(detail)}</div>`;
+ document.querySelectorAll(".activity-row.current-activity").forEach(x=>x.classList.remove("current-activity"));if(currentIndex>=0&&today.getTime()===target.getTime()){let row=document.getElementById("activity-"+currentIndex);if(row)row.classList.add("current-activity")}
+}
+function render(){renderNav();updateStats();const root=document.getElementById("mainContent");if(toolView==="checklist")return renderChecklist(root);if(toolView==="expenses")return renderExpenses(root);if(toolView==="overview")return renderOverview(root);renderDay(root)}
+function renderDay(root){const d=state.days[activeDay];root.innerHTML=`
+ <section class="card day-head"><div class="eyebrow">DAY ${activeDay+1} · ${d.date}</div><h2>${esc(d.title)}</h2><div class="sub">${esc(d.summary)}</div><div class="day-meta"><span class="tag">🛏 ${esc(d.stay)}</span><span class="tag">👥 10 travellers</span><span class="tag">🚐 Urbania</span></div><div class="maplinks" style="margin-top:14px"><a target="_blank" rel="noopener" href="${mapUrl(d)}">Open day route in Google Maps ↗</a><a href="#" onclick="showTools('checklist');return false">Booking checklist</a></div></section>
+ <section class="card live-panel" id="livePanel" aria-live="polite"></section>
+  <section class="card section"><div class="section-head"><h3>Daily timetable</h3><button class="btn small no-print" onclick="window.print()">Print this day</button></div><p class="muted">View the planned activities and timings. This itinerary is maintained by the trip owner.</p>
+  <div class="table-wrap"><table class="schedule"><thead><tr><th>Time</th><th>Place / activity</th><th>Duration / travel</th><th>Notes</th></tr></thead><tbody>${d.items.map((it,j)=>`<tr id="activity-${j}" class="activity-row"><td class="time">${esc(it[0])}</td><td class="place"><strong>${esc(it[1])}</strong></td><td class="duration">${esc(it[2])}</td><td>${esc(it[3])}</td></tr>`).join("")}</tbody></table></div></section>
+  <section class="card section"><h3>Day notes</h3><div class="readonly-note">${d.notes?esc(d.notes):"No additional notes have been published for this day."}</div><h3 style="margin-top:18px">Day reminder</h3><div class="readonly-note">${d.reminder?esc(d.reminder):"No additional reminder has been published for this day."}</div><p class="muted" style="margin-bottom:0">Notes and reminders are maintained by the trip owner.</p></section>
+  <div class="note"><b>Planning reminder:</b> Drive durations are estimates. Confirm the actual route, road conditions, opening hours and activity bookings shortly before travel. This itinerary is editable and not a live booking confirmation.</div>`}
+function renderChecklist(root){root.innerHTML=`<section class="card section"><div class="section-head"><div><div class="eyebrow">TRIP PREPARATION</div><h2 style="margin:4px 0">Booking checklist</h2></div><span class="tag">Group reference</span></div><div class="checklist">${state.checklist.map(x=>`<div class="check ${x.done?"done":""}"><span>${x.done?"✓":"○"}</span><span>${esc(x.text)}</span></div>`).join("")}</div><p class="muted">Checklist status is published by the trip owner.</p></section>`}
+function renderExpenses(root){let total=state.expenses.reduce((a,e)=>a+(Number(e.amount)||0),0),per=total/10;root.innerHTML=`<section class="card section"><div class="eyebrow">GROUP BUDGET</div><h2 style="margin:4px 0 14px">Expense tracker</h2><div class="expense-summary"><div><span class="muted">Total expenses</span><br><b>${money(total)}</b></div><div><span class="muted">Per person (10 travellers)</span><br><b>${money(per)}</b></div></div><div class="table-wrap" style="margin-top:15px"><table class="schedule"><thead><tr><th>Expense</th><th>Day</th><th>Amount</th><th>Paid by</th></tr></thead><tbody>${state.expenses.length?state.expenses.map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.day)}</td><td>${money(e.amount)}</td><td>${esc(e.paid)}</td></tr>`).join(""):`<tr><td colspan="4" class="muted">No expenses have been published yet.</td></tr>`}</tbody></table></div><p class="muted">Expense details are maintained by the trip owner.</p></section>`}
+function renderOverview(root){root.innerHTML=`<section class="card section"><div class="eyebrow">ROUTE OVERVIEW</div><h2 style="margin:4px 0 14px">Your Kerala journey</h2><div class="maplinks">${["Kochi Airport","Fort Kochi","Athirappilly","Munnar","Kolukkumalai","Mattupetty Dam","Kundala Lake","Vagamon Pine Forest","Parunthumpara","Thekkady","Periyar Lake","Alleppey","Jatayu Earth's Center","Kollam","Padmanabhaswamy Temple","Kovalam","Varkala","Kochi Airport"].map(p=>`<a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p+", Kerala, India")}">${p} ↗</a>`).join("")}</div><p class="muted" style="margin-top:14px">Open individual place links in Google Maps. The day route link uses the places listed in that day's plan.</p></section>`}
+function mapUrl(d){let places=d.items.map(x=>x[1]).filter(x=>x&&!/breakfast|lunch|dinner|check.in|depart|arrive|flight|return to hotel|rest/i.test(x));let q=places.join(" to ");return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(places[0]||"Kochi, Kerala")+"&destination="+encodeURIComponent(places[places.length-1]||"Kerala")+"&waypoints="+encodeURIComponent(places.slice(1,-1).join("|"))+"&travelmode=driving"}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function attr(s){return esc(s).replace(/`/g,"&#96;")}
+activeDay=tripDayIndex(new Date());
+render();
+setInterval(updateLiveStatus,1000);
+</script>
+</body>
+</html>
