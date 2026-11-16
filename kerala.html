@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kerala Trip Planner | 18–24 November 2026</title>
+<style>
+:root{--green:#176b55;--green2:#e8f4ef;--ink:#20312d;--muted:#71817b;--cream:#f7f8f4;--line:#e4eae5;--orange:#e58a43;--white:#fff;--shadow:0 8px 28px rgba(28,58,47,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.hero{background:linear-gradient(120deg,#123f35,#23765f);color:white;padding:34px max(22px,calc((100vw - 1180px)/2)) 30px}
+.topline{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:.3px}.pill{border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:6px 11px;font-size:12px;background:rgba(255,255,255,.12)}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:28px 0 10px}.hero p{color:#e0eee8;margin:0;max-width:700px}.hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.stat{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);padding:10px 14px;border-radius:13px;min-width:125px}.stat b{display:block;font-size:17px}.stat span{font-size:12px;color:#d8e9e2}
+.wrap{max-width:1180px;margin:24px auto;padding:0 18px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:18px}.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:10px;padding:9px 13px;font-weight:650}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn.soft{background:var(--green2);color:var(--green);border-color:#d4e9df}.btn.danger{color:#a43c31}.btn.small{padding:6px 9px;font-size:12px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.panel,.card{background:white;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.sidebar{padding:16px;position:sticky;top:14px}.side-title{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:2px 0 12px}.day-nav{display:flex;flex-direction:column;gap:6px}.day-btn{border:0;background:transparent;text-align:left;padding:11px;border-radius:11px;color:var(--ink);display:flex;gap:10px;align-items:center}.day-btn.active{background:var(--green2);color:var(--green);font-weight:750}.day-num{width:32px;height:32px;border-radius:9px;background:#f0f3ef;display:grid;place-items:center;font-weight:800;font-size:12px;flex-shrink:0}.day-btn.active .day-num{background:var(--green);color:white}.day-btn small{display:block;color:var(--muted);font-weight:500}.main{min-width:0}.day-head{padding:22px;margin-bottom:14px}.eyebrow{color:var(--green);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.day-head h2{margin:5px 0;font-size:27px}.sub{color:var(--muted)}.day-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tag{background:#f1f5f1;border-radius:99px;padding:6px 10px;font-size:12px;color:#50625a}.section{padding:18px;margin-bottom:14px}.section h3{margin:0 0 14px;font-size:17px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.table-wrap{overflow-x:auto}.schedule{width:100%;border-collapse:collapse;min-width:680px}.schedule th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:9px;border-bottom:1px solid var(--line)}.schedule td{padding:10px 9px;border-bottom:1px solid #edf0ed;vertical-align:top}.schedule tr:last-child td{border-bottom:0}.schedule input,.schedule select{width:100%;min-width:90px;border:1px solid transparent;background:#f7f9f6;border-radius:7px;padding:7px;color:var(--ink)}.schedule input:focus,.schedule select:focus{outline:2px solid #b9dacc;background:white}.schedule .time{min-width:112px}.schedule .place{min-width:145px}.schedule .duration{min-width:90px}.schedule .actions{white-space:nowrap}.muted{color:var(--muted);font-size:12px}.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.check{display:flex;gap:9px;align-items:flex-start;padding:10px;border:1px solid var(--line);border-radius:10px}.check input{accent-color:var(--green);margin-top:4px}.check.done span{text-decoration:line-through;color:#91a098}.progress{height:7px;background:#edf2ee;border-radius:99px;overflow:hidden;margin:8px 0 13px}.progress span{height:100%;display:block;background:var(--green);width:0;transition:width .2s}.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}.mini{padding:15px}.mini b{font-size:22px;display:block}.mini span{color:var(--muted);font-size:12px}.maplinks{display:flex;gap:8px;flex-wrap:wrap}.maplinks a{color:var(--green);background:var(--green2);border-radius:9px;padding:8px 11px;text-decoration:none;font-size:13px;font-weight:650}.expense-row{display:grid;grid-template-columns:1.2fr 1fr .8fr .8fr auto;gap:8px;margin:9px 0}.field{width:100%;padding:9px;border:1px solid var(--line);border-radius:9px;background:white}.expense-summary{display:flex;gap:20px;flex-wrap:wrap;padding:12px;background:#f5f8f5;border-radius:10px;margin-top:12px}.expense-summary b{font-size:18px}.note{background:#fff8ec;border:1px solid #f4e2c6;color:#76552c;padding:12px;border-radius:11px;font-size:13px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:22px}
+.live-panel{padding:17px 20px;margin-bottom:14px;border-left:4px solid var(--green)}.live-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}.live-clock{font-weight:750;color:var(--green);font-variant-numeric:tabular-nums}.live-current{font-size:19px;font-weight:800;margin:8px 0 3px}.live-next{color:var(--muted);font-size:13px}.activity-row.current-activity td{background:#e8f4ef!important}.activity-row.current-activity td:first-child{box-shadow:inset 4px 0 var(--green)}.readonly-note{white-space:pre-wrap;line-height:1.65}.modal-back{position:fixed;inset:0;background:#14231fcc;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal{background:white;border-radius:16px;padding:22px;max-width:480px;width:100%}.modal h3{margin-top:0}.modal .field{margin:6px 0 12px}.hidden{display:none!important}
+/* ===== NEW: Explore views ===== */
+.explore-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.explore-intro{padding:20px;margin-bottom:14px;background:linear-gradient(120deg,#f1f9f4,#ffffff);border-left:4px solid var(--green)}
+.explore-intro h2{margin:4px 0 6px;font-size:24px}
+.explore-intro p{margin:0;color:var(--muted);font-size:14px}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.spot-card{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease}
+.spot-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(28,58,47,.12)}
+.spot-emoji{font-size:22px;line-height:1;margin-bottom:6px}
+.spot-card h4{margin:0 0 6px;font-size:16px}
+.spot-card p{margin:0 0 10px;color:#4a5a53;font-size:13.5px;flex:1}
+.spot-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{font-size:11px;font-weight:700;padding:4px 8px;border-radius:99px;background:var(--green2);color:var(--green);letter-spacing:.02em}
+.chip.orange{background:#fdf0e2;color:#a45d20}
+.chip.blue{background:#e6f0fb;color:#2f5f95}
+.chip.pink{background:#fbe9ef;color:#a43c67}
+.day-highlights{padding:14px 20px;margin-bottom:14px;background:linear-gradient(120deg,#fbfdfb,#f4f9f5);border:1px dashed #cfe3d7;border-radius:14px}
+.day-highlights .dh-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:8px}
+.dh-row{display:flex;gap:8px;flex-wrap:wrap}
+.dh-item{display:flex;gap:6px;align-items:center;font-size:13px;background:white;border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.dh-item b{font-weight:700}
+.dh-item small{color:var(--muted)}
+/* ===== NEW: Language view ===== */
+.lang-day{padding:18px;margin-bottom:14px}
+.lang-day h3{margin:0 0 4px;font-size:18px}
+.lang-day .lang-sub{color:var(--muted);font-size:13px;margin-bottom:14px}
+.phrase-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.phrase-card{background:#f8fbf9;border:1px solid var(--line);border-radius:12px;padding:12px}
+.phrase-card .en{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:700;margin-bottom:4px}
+.phrase-card .ml{font-size:18px;font-weight:800;color:var(--green);line-height:1.25}
+.phrase-card .rom{font-size:13px;color:#4a5a53;margin-top:3px;font-style:italic}
+.phrase-card .tip{font-size:12px;color:#8a6b3d;margin-top:6px}
+.lang-badge{display:inline-block;background:#fdf0e2;color:#a45d20;font-size:11px;font-weight:800;padding:3px 8px;border-radius:99px;margin-left:6px;letter-spacing:.03em}
+.first-timer-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}.sidebar{position:static}.day-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.overview-grid{grid-template-columns:repeat(2,1fr)}.first-timer-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.hero{padding:25px 18px}.wrap{padding:0 12px;margin:15px auto}.day-nav{grid-template-columns:1fr}.checklist{grid-template-columns:1fr}.overview-grid{grid-template-columns:1fr 1fr}.expense-row{grid-template-columns:1fr 1fr}.expense-row .wide{grid-column:span 2}.day-head h2{font-size:23px}}
+@media print{body{background:white}.hero{background:#176b55!important;padding:18px;print-color-adjust:exact}.toolbar,.sidebar,.no-print,.day-nav,.explore-toolbar{display:none!important}.wrap{max-width:none;margin:0;padding:0}.layout{display:block}.panel,.card{box-shadow:none;border:0}.section,.day-head{break-inside:avoid;padding:12px}.schedule{min-width:0}.schedule input,.schedule select{border:0;background:transparent;padding:2px}.footer{display:none}.main{display:block}.grid-cards{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="topline"><div class="brand">🌿 KERALA • TRIP PLANNER</div><span class="pill">18–24 NOVEMBER 2026 · 10 TRAVELLERS</span></div>
+ <h1>Seven days. One beautiful journey.</h1>
+ <p>Itinerary, live trip status, photography hotspots, shopping streets, hidden gems and a first-timer's Malayalam phrasebook — all in one shared plan.</p>
+ <div class="hero-stats">
+   <div class="stat"><b>7 days</b><span>18–24 Nov 2026</span></div>
+   <div class="stat"><b>10</b><span>travellers</span></div>
+   <div class="stat"><b>6</b><span>base towns</span></div>
+   <div class="stat"><b>4</b><span>explore guides</span></div>
+ </div>
+</header>
+<div class="wrap">
+ <div class="toolbar no-print">
+   <button class="btn primary" onclick="window.print()">⬇ Print / Save PDF</button>
+   <button class="btn soft" onclick="showTools('overview')">🧭 Route overview</button>
+   <button class="btn soft" onclick="showTools('checklist')">✅ Checklist</button>
+   <button class="btn soft" onclick="showTools('photography')">📸 Photography</button>
+   <button class="btn soft" onclick="showTools('shopping')">🛍 Shopping</button>
+   <button class="btn soft" onclick="showTools('gems')">💎 Hidden gems</button>
+   <button class="btn soft" onclick="showTools('language')">🗣 Speak Malayalam</button>
+   <span class="muted">Shared read-only itinerary · Updates are published by the trip owner</span>
+ </div>
+ <div class="layout">
+  <aside class="panel sidebar">
+   <div class="side-title">Your itinerary</div>
+   <nav class="day-nav" id="dayNav"></nav>
+   <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+   <div class="side-title">Explore guides</div>
+   <nav class="day-nav">
+     <button class="day-btn" onclick="showTools('photography')"><span class="day-num">📸</span><span><strong>Photography</strong><small>Best light & frames</small></span></button>
+     <button class="day-btn" onclick="showTools('shopping')"><span class="day-num">🛍</span><span><strong>Shopping</strong><small>Markets & souvenirs</small></span></button>
+     <button class="day-btn" onclick="showTools('gems')"><span class="day-num">💎</span><span><strong>Hidden gems</strong><small>Offbeat detours</small></span></button>
+     <button class="day-btn" onclick="showTools('language')"><span class="day-num">🗣</span><span><strong>Speak Malayalam</strong><small>Phrases by day</small></span></button>
+   </nav>
+   <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+   <p class="muted">Choose a day to view its timetable, current activity, route and published reminders.</p>
+  </aside>
+  <main class="main" id="mainContent"></main>
+ </div>
+ <div class="footer">Kerala Trip Planner · Shared read-only itinerary · Maintained by the trip owner</div>
+</div>
+<script>
+const initialDays=[
+{date:"Wed, 18 Nov 2026",title:"Kochi → Athirappilly → Munnar",stay:"Munnar · Night 1 of 2",summary:"Arrival in Kochi, Fort Kochi and Athirappilly on the way to Munnar.",
+notes:"FIRST-TIME KERALA TIPS — DAY 1\n\n• Kochi airport is small and quick — collect luggage and meet your driver outside the arrival gate. Keep the driver's number saved offline.\n• Fort Kochi is a heritage zone: walk slowly, the streets are narrow and photogenic. The Chinese fishing nets are best seen near the waterfront.\n• Kerala's official language is Malayalam, but English is widely understood in tourist areas. A smile and 'Namaskaram' (hello) goes a long way.\n• Dress modestly in Fort Kochi (shoulders and knees covered) — it's a conservative heritage area with churches and temples nearby.\n• Athirappilly has slippery rocks near the viewpoints — wear shoes with grip, not flip-flops.\n• The drive to Munnar is long and winding. If anyone in the group gets motion sickness, sit in the front and carry lemon drops or ginger candy.\n• Munnar is cool at night (15–18°C in November) — keep a light jacket handy.",
+reminder:"Remember: Kerala runs on 'island time' — schedules are flexible, so build buffer into every leg. Carry a reusable water bottle; tap water is not safe to drink, but hotels provide filtered water. Download offline Google Maps for the hill sections — signal drops between Athirappilly and Munnar.",
+firstTimer:{culture:"In Fort Kochi, remove shoes before entering churches and temples. Ask before photographing locals — a smile and a nod goes far.",food:"Try a Kerala breakfast of appam and stew. Most restaurants are happy to make dishes less spicy if you ask 'less spicy, please'."},
+items:[
+["07:00 AM","Arrive at Kochi Airport","Arrival formalities","Flight arrival; collect luggage and meet the driver."],
+["08:00 AM","Fort Kochi","2 hours","Chinese fishing nets, Fort Kochi streets and waterfront. Keep this visit short."],
+["10:00 AM","Drive towards Athirappilly","2–2.5 hours","Travel estimate; confirm road and traffic with driver."],
+["12:30 PM","Athirappilly Waterfalls","1–1.5 hours","Viewpoints and lunch nearby. Wear comfortable shoes."],
+["02:00 PM","Drive to Munnar","4–5 hours","Long hill drive; include a comfort break."],
+["07:00 PM","Munnar hotel check-in","Evening","Dinner and rest."]
+]},
+{date:"Thu, 19 Nov 2026",title:"Munnar sightseeing + Kolukkumalai sunrise",stay:"Munnar · Night 2 of 2",summary:"Early sunrise jeep experience followed by Munnar's tea gardens, dam and lake.",
+notes:"FIRST-TIME KERALA TIPS — DAY 2\n\n• Kolukkumalai is cold and windy at 4 AM — carry a warm layer, a beanie and a torch. The jeep ride is bumpy; secure your phone and camera.\n• The sunrise jeep track is rough and narrow. Only local jeeps are allowed; your Urbania stays at Suryanelli. Book jeeps the previous evening for 10 people (typically 2 jeeps).\n• Tea gardens are private estates — walk only on marked paths. Plucking is done by workers; ask before photographing them.\n• Mattupetty Dam and Kundala Lake have boating — check life jackets are provided and worn.\n• Munnar town has good spice and tea shops, but prices at estate outlets are often fresher than tourist stalls.\n• Altitude here is ~1,600m. If anyone feels breathless or dizzy, rest and hydrate — it's mild altitude, but real.\n• Local food to try: appam with stew, puttu with kadala curry, and fresh cardamom tea.",
+reminder:"Sunrise timing in November is around 6:15 AM — leave Suryanelli by 4:30 AM to catch first light. Keep cash for jeep payments (UPI works but signal is patchy). Do not litter in the tea estates; carry a small bag for waste.",
+firstTimer:{culture:"Tea estate workers are often Tamil-speaking; a friendly 'vanakkam' works too. Never pluck tea leaves yourself — it's their livelihood.",food:"Cardamom tea ('elakka chaya') is a must. Ask for it at any roadside stall — it's the local fuel."},
+items:[
+["03:00 AM","Leave for Suryanelli jeep point","Travel","Confirm pickup point and jeep arrangements the previous evening."],
+["04:00 AM","Kolukkumalai sunrise safari","2–2.5 hours","Book suitable jeeps for 10 people; Urbania does not go up the rough final route."],
+["07:00 AM","Breakfast","45 minutes","Return and have breakfast."],
+["09:00 AM","Tea garden / Tea Museum","1–1.5 hours","Choose a tea estate viewpoint or museum depending on energy."],
+["11:00 AM","Mattupetty Dam","45–60 minutes","Lake views; boating subject to availability."],
+["12:30 PM","Lunch","1 hour","Lunch break."],
+["02:00 PM","Echo Point","30–45 minutes","Short photo stop if time permits."],
+["03:00 PM","Kundala Lake","45–60 minutes","Enjoy the lake and available boating options."],
+["05:00 PM","Return to hotel","Evening","Tea, shopping or rest; dinner at hotel."]
+]},
+{date:"Fri, 20 Nov 2026",title:"Munnar → Vagamon → Thekkady",stay:"Thekkady · 1 night",summary:"Scenic transfer day with Vagamon Pine Forest and Parunthumpara viewpoint.",
+notes:"FIRST-TIME KERALA TIPS — DAY 3\n\n• This is a long transfer day — eat a proper breakfast, carry snacks and water for the drive.\n• Vagamon Pine Forest is a short walk, but the ground can be muddy after rain. Wear closed shoes.\n• Parunthumpara is a cliff viewpoint — there are no railings at the edge. Keep children close and stay behind the marked area.\n• Thekkady (Kumily) is a border town near Tamil Nadu — you may see Tamil influences in food and shops. It's safe and friendly.\n• Thekkady spice shops are excellent value — buy whole spices (pepper, cardamom, cinnamon) rather than powders for longer shelf life.\n• Kathakali is a classical Kerala art form — the show usually includes a makeup demonstration before the performance. Arrive 15 minutes early for good seats.\n• Thekkady is cooler than the coast but warmer than Munnar — light layers work well.",
+reminder:"The Munnar–Vagamon–Thekkady route has many hairpin bends. If anyone is prone to motion sickness, take a break at Vagamon. Keep small change for roadside tea stalls — a cup of chai is a Kerala ritual worth trying.",
+firstTimer:{culture:"Kathakali is not a 'show' but a ritual art form — silence phones, don't use flash, and stay till the end if you can.",food:"Try Thekkady's fresh cardamom and pepper. For meals, 'meals' on a menu means a thali (rice + curries + sides) — great value."},
+items:[
+["06:30 AM","Breakfast at Munnar hotel","45 minutes","Check out and load luggage."],
+["07:30 AM","Drive Munnar to Vagamon","Approx. 3–3.5 hours","Travel estimate only; winding hill roads may add time."],
+["10:45 AM","Vagamon Pine Forest","60–75 minutes","Walk among the tall pine trees and take group photographs."],
+["12:00 PM","Lunch in Vagamon","45 minutes","Choose a restaurant with parking for the Urbania."],
+["12:45 PM","Vagamon Meadows (optional)","30 minutes","Skip if running late."],
+["01:15 PM","Drive towards Parunthumpara","Approx. 1.5 hours","Confirm route and road condition with driver."],
+["02:45 PM","Parunthumpara Viewpoint","30–45 minutes","Check weather and visibility; stay away from cliff edges."],
+["03:30 PM","Drive to Thekkady","Approx. 1.5 hours","Proceed to hotel."],
+["05:00 PM","Thekkady hotel check-in","1 hour","Freshen up and rest."],
+["07:00 PM","Kathakali performance","1 hour","Confirm show timing and reserve 10 seats."],
+["08:15 PM","Dinner","Evening","Inform hotel if dinner service timing needs adjustment."]
+]},
+{date:"Sat, 21 Nov 2026",title:"Thekkady → Periyar → Alleppey",stay:"Alleppey · 1 night",summary:"Periyar boat experience, optional responsible elephant observation and Alleppey backwaters.",
+notes:"FIRST-TIME KERALA TIPS — DAY 4\n\n• Periyar boat safari: carry binoculars if you have them. Wildlife sightings (elephants, gaur, birds) are not guaranteed — enjoy the forest either way.\n• Do NOT book elephant rides or shows. Choose ethical observation only — Kerala's tourism department discourages rides. Ask your driver for a responsible option.\n• Alleppey (Alappuzha) is the 'Venice of the East' — the backwaters are the highlight. A private shikara for 10 people is more intimate than a large houseboat for a short cruise.\n• Backwater water is not for swimming. Life jackets are mandatory on all boats — insist on them.\n• Alleppey is hot and humid (30–32°C). Light cotton clothes, sunscreen and a hat are essential.\n• Try karimeen (pearl spot fish) and toddy-shop style food if you're adventurous — but stick to busy, clean-looking places.\n• The drive from Thekkady to Alleppey is 4–5 hours — plan a lunch stop at a good restaurant en route.",
+reminder:"Book the Periyar boat for the earliest slot (7:30 AM) — animals are more active and the light is better. For the shikara, confirm capacity for 10 people and that life jackets are provided. Carry a light rain jacket — November can bring short showers.",
+firstTimer:{culture:"Toddy shops (kallu shaap) are a Kerala institution — go with a local, keep it respectful, and try the food (it's often better than the toddy).",food:"Karimeen pollichathu (pearl spot fish in banana leaf) is the signature Alleppey dish. Ask for it if it's not on the menu."},
+items:[
+["06:30 AM","Breakfast / check out","45 minutes","Confirm boat ticket and departure arrangements."],
+["07:30 AM","Periyar Lake boat safari","1.5 hours","Reserve 10 seats together if possible; wildlife sightings are not guaranteed."],
+["09:15 AM","Responsible elephant observation (optional)","45 minutes","Choose an ethical observation experience; avoid rides or forced bathing."],
+["10:15 AM","Drive to Alleppey","Approx. 4–5 hours","Include a lunch / comfort break en route."],
+["02:30 PM","Alleppey hotel check-in / lunch","1 hour","Confirm luggage drop and boat pickup."],
+["03:30 PM","Private shikara / canoe cruise","2 hours","Reserve capacity for all 10 people; confirm route and life jackets."],
+["05:30 PM","Backwater sunset / relax","Evening","Return to hotel and dinner."]
+]},
+{date:"Sun, 22 Nov 2026",title:"Alleppey → Jatayu → Kollam",stay:"Kollam · Night 1 of 2",summary:"Travel north to Jatayu Earth's Center, then continue to Kollam.",
+notes:"FIRST-TIME KERALA TIPS — DAY 5\n\n• Jatayu Earth's Center is a large rock with the world's largest bird sculpture. The cable car is the easy way up; walking up is steep and hot. Check cable car operating hours before you go.\n• There are adventure activities (zip line, etc.) at Jatayu — book only if the group is interested and time allows.\n• Kollam is a historic cashew and spice port. It's less touristy than Kochi — a good place to see everyday Kerala life.\n• Thangassery Lighthouse has great views but check opening hours (usually 3–5 PM). The beach nearby is quiet.\n• Kollam is famous for cashew nuts — buy from a reputable shop, not roadside stalls, for quality.\n• Kerala seafood is excellent — but if you have a sensitive stomach, stick to freshly cooked, hot food.\n• ATMs are available in Kollam town, but carry some cash for small shops and autos.",
+reminder:"Jatayu can get crowded on weekends — go early. The cable car may close in high wind or rain; have a backup plan (the sculpture is visible from the base too). Kollam is a good place to do laundry if you're halfway through the trip.",
+firstTimer:{culture:"Kollam is a working port town — less touristy, more 'real Kerala'. Dress casually but modestly; locals appreciate effort.",food:"Try Kollam-style fish curry with rice — it's tangy, coconut-based and different from the Alleppey style."},
+items:[
+["07:30 AM","Breakfast and check out","45 minutes","Settle hotel bill and load luggage."],
+["08:15 AM","Drive to Jatayu Earth's Center","Approx. 3 hours","Check traffic and opening arrangements."],
+["11:30 AM","Jatayu Earth's Center","1.5–2 hours","Check entry, cable car operation, activity availability and ticket timings."],
+["01:30 PM","Lunch","1 hour","Lunch near Jatayu or on the way."],
+["02:30 PM","Drive to Kollam","Approx. 1 hour","Proceed to hotel."],
+["03:30 PM","Kollam hotel check-in","1 hour","Rest and refresh."],
+["05:00 PM","Optional Thangassery Lighthouse / beach","1–1.5 hours","Only if lighthouse opening hours and energy allow."],
+["07:00 PM","Dinner","Evening","Overnight in Kollam."]
+]},
+{date:"Mon, 23 Nov 2026",title:"Kollam → Padmanabhaswamy Temple → Kovalam → Varkala",stay:"Kollam · Night 2 of 2",summary:"A full-day southern Kerala excursion. Prioritise temple timing and avoid overloading the day.",
+notes:"FIRST-TIME KERALA TIPS — DAY 6\n\n• Sree Padmanabhaswamy Temple (Thiruvananthapuram) has a strict dress code: men must wear a dhoti (mundu) — shirts are often not allowed inside; women must wear a saree or salwar with dupatta. Entry is restricted to Hindus. Check current rules before you go.\n• The temple has security checks — leave large bags, cameras and phones in the vehicle or hotel.\n• Kovalam has three beaches: Lighthouse Beach (most popular), Hawa Beach, and Samudra Beach. Lighthouse Beach has the famous red-and-white lighthouse — climb for views if open.\n• Varkala Cliff is a laterite cliff with shops and cafés on top. The walk is uneven — wear good footwear. The beach below (Papanasam) is believed to be holy; be respectful.\n• Varkala has strong currents in some seasons — swim only where lifeguards are present and heed warning flags.\n• This is a packed day — if energy is low, skip Kovalam and go straight to Varkala for a relaxed sunset.\n• Kerala sun is strong even in November — reapply sunscreen.",
+reminder:"Temple dress code is non-negotiable — carry a dhoti/saree in the vehicle if unsure. Varkala sunset is around 6 PM in November; plan to be on the cliff by 5:15 PM for the best light. Keep some cash for parking and beach entry fees.",
+firstTimer:{culture:"At Padmanabhaswamy, non-Hindus cannot enter the inner sanctum. Respect the rule quietly — the outer areas are still worth seeing.",food:"Varkala is a café town — from Kerala seafood to Israeli shakshuka. Try a fresh lime soda at sunset on the cliff."},
+items:[
+["06:30 AM","Breakfast and leave Kollam","45 minutes","Confirm temple dress rules and opening schedule in advance."],
+["08:30 AM","Sree Padmanabhaswamy Temple","1–1.5 hours","Entry is restricted to Hindus; dress code and darshan timings must be checked with the temple."],
+["10:15 AM","Drive to Kovalam","Approx. 30–45 minutes","Travel estimate."],
+["11:00 AM","Lighthouse Beach / Hawa Beach","1.5–2 hours","Choose the beaches you most want to visit; check lighthouse access."],
+["01:00 PM","Lunch","1 hour","Lunch around Kovalam."],
+["02:00 PM","Drive to Varkala","Approx. 1–1.5 hours","Allow extra time for traffic."],
+["03:30 PM","Varkala Cliff and Papanasam Beach","1.5–2 hours","Enjoy the cliff walk, shops and beach views; check sea conditions."],
+["05:30 PM","Return to Kollam","Approx. 1–1.5 hours","Dinner and overnight stay."]
+]},
+{date:"Tue, 24 Nov 2026",title:"Kollam → Kochi Airport",stay:"Departure · 7:00 PM flight",summary:"Keep this day for the airport transfer. Avoid adding sightseeing stops.",
+notes:"FIRST-TIME KERALA TIPS — DAY 7\n\n• Today is a transfer day — do NOT add sightseeing. The Kollam–Kochi drive is 4–5.5 hours with traffic; leave by 8 AM for a 7 PM flight.\n• Kochi airport (COK) is at Nedumbassery, about 25 km from Kochi city. International flights need 3 hours before departure; domestic 2 hours.\n• If you have time at the airport, there are good Kerala souvenir shops (spices, tea, handicrafts) — but prices are higher than town markets.\n• Pack spices and liquids in checked luggage, not hand baggage. Coconut oil and Ayurvedic oils must be sealed well.\n• Before leaving, do a final check: hotel bills settled, no chargers left behind, and all group members have their passports/ID.\n• Kerala's roads can be slow — if your flight is international, aim to reach the airport by 2–3 PM at the latest.\n• Thank your driver and hotel staff — a small tip (₹200–500 per day for the driver) is customary and appreciated.",
+reminder:"Set a group alarm for 7 AM. Confirm the airline terminal and check-in counter the night before. Keep a power bank for the drive — you'll want your phone charged for boarding passes and photos.",
+firstTimer:{culture:"A simple 'nandi' (thank you) to your driver and hotel staff goes a long way. Tipping is not mandatory but is deeply appreciated.",food:"Grab banana chips and Kerala tea from the airport for gifts — they travel well and are a classic Kerala souvenir."},
+items:[
+["07:00 AM","Breakfast and check out","45 minutes","Check room, luggage and hotel bill."],
+["08:00 AM","Depart Kollam for Kochi Airport","Approx. 4–5.5 hours","Travel estimate; traffic, roadworks and breaks can affect timing."],
+["01:30 PM","Target airport arrival","Buffer","Aim to reach early; allow additional time for an international flight."],
+["07:00 PM","Flight departure","Departure","Confirm airline check-in and terminal details."]
+]}
+];
+const defaultChecklist=["Confirm all hotel names, addresses and check-in times","Confirm Urbania driver, route and luggage capacity","Book Kolukkumalai jeeps for 10 people","Confirm Periyar boat tickets for 10 people","Book Kathakali show for 10 people","Confirm spice plantation visit (if included)","Book Alleppey private shikara / canoe for 10","Check Jatayu entry and cable car operation","Confirm Padmanabhaswamy Temple entry and dress code","Save flight tickets and airport terminal details","Share itinerary and driver contact with the group"];
+
+/* ============================================================
+   Malayalam phrasebook, grouped by day
+   ============================================================ */
+const languageByDay=[
+ {day:"Day 1 · Kochi & Fort Kochi",sub:"Arrival, greetings and heritage-zone basics",
+  phrases:[
+   {en:"Hello",ml:"നമസ്കാരം",rom:"Namaskaram",tip:"Universal Kerala greeting — say it with a smile."},
+   {en:"Thank you",ml:"നന്ദി",rom:"Nandi",tip:"A small bow of the head adds warmth."},
+   {en:"Yes / No",ml:"അതെ / അല്ല",rom:"Athe / Alla",tip:"Use 'athe' for yes, 'alla' for no."},
+   {en:"How much is this?",ml:"ഇതിന് എത്ര രൂപ?",rom:"Ithinu ethra roopa?",tip:"Essential for Fort Kochi and Jew Town shopping."},
+   {en:"Please reduce the price",ml:"കുറച്ച് കുറയ്ക്കാമോ?",rom:"Kurachu kurayakkamo?",tip:"Bargaining is expected in markets — say it politely."},
+   {en:"Where is the toilet?",ml:"ടോയ്‌ലെറ്റ് എവിടെ?",rom:"Toilet evide?",tip:"Handy for heritage walks and long drives."}
+  ]},
+ {day:"Day 2 · Munnar & Kolukkumalai",sub:"Tea gardens, sunrise and hill-town courtesy",
+  phrases:[
+   {en:"Good morning",ml:"സുപ്രഭാതം",rom:"Suprabhatham",tip:"Use before sunrise at Kolukkumalai — locals appreciate the effort."},
+   {en:"Tea, please",ml:"ഒരു ചായ വേണം",rom:"Oru chaya venam",tip:"The most useful phrase on a tea estate."},
+   {en:"How far is it?",ml:"എത്ര ദൂരമുണ്ട്?",rom:"Ethra dooramundu?",tip:"Ask before walking to viewpoints."},
+   {en:"Water, please",ml:"വെള്ളം തരാമോ?",rom:"Vellam tharamo?",tip:"Safe to ask anywhere; hotels give filtered water."},
+   {en:"Beautiful view!",ml:"കൊള്ളാം കാഴ്ച!",rom:"Kollam kaazhcha!",tip:"Complimenting the view is a lovely icebreaker."},
+   {en:"No problem / Okay",ml:"കുഴപ്പമില്ല",rom:"Kuzhappamilla",tip:"Relaxed Kerala-style 'it's fine'."}
+  ]},
+ {day:"Day 3 · Vagamon & Thekkady",sub:"Spices, forests and Kathakali evening",
+  phrases:[
+   {en:"Spice, please",ml:"മസാല വേണം",rom:"Masala venam",tip:"At Thekkady spice shops — smell before you buy."},
+   {en:"This is too spicy",ml:"ഇത് വളരെ എരിവാണ്",rom:"Ithu valare erivaanu",tip:"Useful for first-timers at Kerala meals."},
+   {en:"Less spicy, please",ml:"കുറച്ച് എരിവ് കുറയ്ക്കാമോ?",rom:"Kurachu erivu kurayakkamo?",tip:"Restaurants will adjust if asked."},
+   {en:"Delicious!",ml:"രുചിയുണ്ട്!",rom:"Ruchiyundu!",tip:"Say it to the cook — they'll beam."},
+   {en:"Where is the show?",ml:"ഷോ എവിടെ?",rom:"Show evide?",tip:"For Kathakali at Thekkady."},
+   {en:"Excuse me",ml:"ക്ഷമിക്കണം",rom:"Kshamikkanam",tip:"Polite way to get attention or apologise."}
+  ]},
+ {day:"Day 4 · Periyar & Alleppey",sub:"Boats, backwaters and fish curry",
+  phrases:[
+   {en:"Boat, please",ml:"ബോട്ട് വേണം",rom:"Boat venam",tip:"At Periyar or Alleppey jetty."},
+   {en:"Life jacket?",ml:"ലൈഫ് ജാക്കറ്റ് ഉണ്ടോ?",rom:"Life jacket undo?",tip:"Ask before boarding — it's your right."},
+   {en:"Fish, please",ml:"മീൻ വേണം",rom:"Meen venam",tip:"Karimeen is the local speciality."},
+   {en:"How long does it take?",ml:"എത്ര സമയമെടുക്കും?",rom:"Ethra samayamedukkum?",tip:"For boat rides and drives."},
+   {en:"Stop here, please",ml:"ഇവിടെ നിർത്താമോ?",rom:"Evide nirthamo?",tip:"For photo stops and lunch breaks."},
+   {en:"Very beautiful",ml:"വളരെ മനോഹരം",rom:"Valare manoharam",tip:"Perfect for backwater sunsets."}
+  ]},
+ {day:"Day 5 · Jatayu & Kollam",sub:"Cable car, cashews and port-town life",
+  phrases:[
+   {en:"Ticket, please",ml:"ടിക്കറ്റ് വേണം",rom:"Ticket venam",tip:"At Jatayu cable car counter."},
+   {en:"How much for two?",ml:"രണ്ടിന് എത്ര?",rom:"Randinu ethra?",tip:"Adjust the number for your group."},
+   {en:"Cashew, please",ml:"കശുവണ്ടി വേണം",rom:"Kashuvandi venam",tip:"Kollam is famous for cashews — buy sealed packets."},
+   {en:"Where is the lighthouse?",ml:"ലൈറ്റ്‌ഹൗസ് എവിടെ?",rom:"Lighthouse evide?",tip:"For Thangassery."},
+   {en:"Help",ml:"സഹായം",rom:"Sahayam",tip:"Emergency word — say it loudly and clearly."},
+   {en:"Thank you very much",ml:"വളരെ നന്ദി",rom:"Valare nandi",tip:"Extra warmth for drivers and staff."}
+  ]},
+ {day:"Day 6 · Padmanabhaswamy, Kovalam & Varkala",sub:"Temple etiquette, beaches and sunsets",
+  phrases:[
+   {en:"Where is the temple?",ml:"ക്ഷേത്രം എവിടെ?",rom:"Kshetram evide?",tip:"For Padmanabhaswamy."},
+   {en:"Dress code?",ml:"വസ്ത്രധാരണ രീതി?",rom:"Vasthradharana reethi?",tip:"Ask before entering the temple."},
+   {en:"Beach, please",ml:"ബീച്ച് വേണം",rom:"Beach venam",tip:"For Kovalam or Varkala."},
+   {en:"Is it safe to swim?",ml:"നീന്താൻ സുരക്ഷിതമാണോ?",rom:"Neenthaan surakshithamano?",tip:"Always ask locals before entering the sea."},
+   {en:"Sunset is beautiful",ml:"സൂര്യാസ്തമയം മനോഹരം",rom:"Suryasthamayam manoharam",tip:"Say it on Varkala cliff — instant friends."},
+   {en:"Sorry, I don't understand",ml:"ക്ഷമിക്കണം, എനിക്ക് മനസ്സിലാകുന്നില്ല",rom:"Kshamikkanam, enikku manassilakunnilla",tip:"Honest and polite — people will slow down."}
+  ]},
+ {day:"Day 7 · Departure day",sub:"Airport, packing and goodbyes",
+  phrases:[
+   {en:"Airport, please",ml:"എയർപോർട്ട് വേണം",rom:"Airport venam",tip:"Confirm with the driver the night before."},
+   {en:"How long to the airport?",ml:"എയർപോർട്ടിലേക്ക് എത്ര സമയം?",rom:"Airportilekku ethra samayam?",tip:"Ask early — Kerala traffic is unpredictable."},
+   {en:"Thank you for everything",ml:"എല്ലാത്തിനും നന്ദി",rom:"Ellathinum nandi",tip:"Lovely way to thank your driver."},
+   {en:"Goodbye",ml:"വിട",rom:"Vida",tip:"Simple, warm farewell."},
+   {en:"See you again",ml:"വീണ്ടും കാണാം",rom:"Veendum kaanam",tip:"A hopeful goodbye — Kerala says this often."},
+   {en:"Take care",ml:"ശ്രദ്ധയോടെ",rom:"Shradhayode",tip:"Friendly sign-off."}
+  ]}
+];
+
+/* ============================================================
+   NEW CONTENT: Photography, Shopping, Hidden gems
+   ============================================================ */
+const photographySpots=[
+ {emoji:"🌊",name:"Fort Kochi — Chinese Fishing Nets",place:"Kochi · Day 1",why:"Iconic cantilevered nets silhouetted against the harbour. Best at sunrise and sunset.",tip:"Use a slow shutter (1/4s–1s) on a tripod or ledge to blur the nets and water. Shoot from the water side facing the city.",chips:[["Golden hour","orange"],["Heritage","blue"]]},
+ {emoji:"💦",name:"Athirappilly Waterfalls",place:"Athirappilly · Day 1",why:"Kerala's largest waterfall — a wall of white water framed by rainforest.",tip:"Shoot from the lower viewpoint for the full cascade. A polariser cuts spray glare. Keep the lens dry with a microfibre cloth.",chips:[["Landscape","blue"],["Monsoon","blue"]]},
+ {emoji:"🍃",name:"Kolukkumalai Sunrise Point",place:"Suryanelli · Day 2",why:"World's highest tea estate — sea of clouds below, ridges above. Unreal at first light.",tip:"Arrive 20 min before sunrise. Bracket exposures for the sky/shadows. A 70–200mm compresses the layered ridges beautifully.",chips:[["Sunrise","orange"],["Bucket list","pink"]]},
+ {emoji:"🌱",name:"Munnar Tea Gardens",place:"Munnar · Day 2",why:"Rolling green carpets, lone trees, and mist. Every turn is a frame.",tip:"Look for a lone tree or a tea plucker in the foreground to add scale. Early morning mist is your friend.",chips:[["Green","blue"],["Portrait","pink"]]},
+ {emoji:"🌲",name:"Vagamon Pine Forest",place:"Vagamon · Day 3",why:"Tall pine columns with soft light filtering through — a moody, cinematic spot.",tip:"Shoot low and wide for leading lines. A light-beam shot needs a bit of haze; mornings are best.",chips:[["Moody","blue"],["Forest","blue"]]},
+ {emoji:"🦅",name:"Parunthumpara Viewpoint",place:"Parunthumpara · Day 3",why:"'Eagle Rock' — a dramatic cliff edge with valley views and wind-shaped clouds.",tip:"Stay behind the safety line. A wide lens for the valley, a tele for layered hills. Sunset gives warm rim light.",chips:[["Cliff","orange"],["Sunset","orange"]]},
+ {emoji:"🛶",name:"Periyar Lake",place:"Thekkady · Day 4",why:"Still water, forested banks, and the chance of elephants and birds at the water's edge.",tip:"A 300mm+ lens is ideal for wildlife. Keep the horizon level; the reflections double the scene.",chips:[["Wildlife","blue"],["Reflection","blue"]]},
+ {emoji:"🌅",name:"Alleppey Backwaters",place:"Alleppey · Day 4",why:"Mirror-calm canals, coconut palms, and houseboats at golden hour.",tip:"Shoot from a low canoe for intimate angles. Sunset from the canal bank gives warm water reflections.",chips:[["Golden hour","orange"],["Backwaters","blue"]]},
+ {emoji:"🪨",name:"Jatayu Earth's Center",place:"Chadayamangalam · Day 5",why:"The world's largest bird sculpture on a rock — surreal scale and epic views.",tip:"Shoot the sculpture from the cable-car approach for scale. Wide lens for the rock, tele for the bird's detail.",chips:[["Landmark","pink"],["Wide","blue"]]},
+ {emoji:"🏖",name:"Varkala Cliff & Papanasam Beach",place:"Varkala · Day 6",why:"Red laterite cliffs dropping into the Arabian Sea — Kerala's most dramatic coast.",tip:"Sunset from the cliff edge looking north. A person on the cliff path adds scale. Watch the slippery edges.",chips:[["Sunset","orange"],["Coast","blue"]]}
+];
+
+const shoppingSpots=[
+ {emoji:"🌶",name:"Jew Town, Mattancherry",place:"Kochi · Day 1",what:"Antiques, spices, curios, vintage prints, brassware.",tip:"Bargain — start at 40–50% of the quoted price. Cash gets better deals. Check spice packets are sealed.",chips:[["Spices","orange"],["Antiques","blue"]]},
+ {emoji:"🧵",name:"Broadway & MG Road",place:"Kochi · Day 1",what:"Authentic spices, Ayurvedic oils, Kasavu sarees, textiles.",tip:"Broadway is the old market for real pepper and cardamom. MG Road is for textiles and jewellery. Compare prices in 2–3 shops.",chips:[["Textiles","pink"],["Ayurveda","blue"]]},
+ {emoji:"🛍",name:"LuLu Mall",place:"Kochi · Day 1 (optional)",what:"Modern brands, hypermarket, food court, AC comfort.",tip:"Good for a quick hypermarket run for snacks and essentials for the group. Parking is easy for the Urbania.",chips:[["Modern","blue"],["Essentials","blue"]]},
+ {emoji:"🍵",name:"Munnar Tea Estates & Tea Museum",place:"Munnar · Day 2",what:"Fresh tea, eucalyptus oil, handmade chocolates, spices.",tip:"Buy tea directly from estate outlets for freshness. Check the date on chocolate boxes — they melt in the hill heat.",chips:[["Tea","orange"],["Chocolate","pink"]]},
+ {emoji:"🌿",name:"Thekkady Spice Market (Kumily)",place:"Thekkady · Day 3",what:"Pepper, cardamom, cinnamon, cloves, vanilla, essential oils.",tip:"The freshest spices come straight from the hills. Smell before you buy; whole spices last longer than powder.",chips:[["Spices","orange"],["Fresh","blue"]]},
+ {emoji:"🥥",name:"Mullakkal Street",place:"Alleppey · Day 4",what:"Coir crafts, spices, textiles, banana chips, local souvenirs.",tip:"Good for lightweight souvenirs. Coir products are a Kerala speciality — check the stitching on bags.",chips:[["Coir","blue"],["Souvenirs","pink"]]},
+ {emoji:"🐚",name:"Varkala Cliff Shops",place:"Varkala · Day 6",what:"Beachwear, jewellery, handicrafts, cafés, books.",tip:"Cliff shops are tourist-priced — walk one lane back for better deals. Great for last-minute gifts.",chips:[["Beach","blue"],["Gifts","pink"]]}
+];
+
+const hiddenGems=[
+ {emoji:"🚲",name:"Kadamakkudy Islands",place:"Near Kochi · Day 1 detour",why:"A cluster of 14 islands in Vembanad Lake. Cycle through paddy fields, fishing villages and tiny bridges — rural Kerala without crowds.",tip:"Rent bicycles locally; go early morning. Best paired with a Fort Kochi morning if time allows.",chips:[["Offbeat","pink"],["Cycling","blue"]]},
+ {emoji:"✨",name:"Kumbalangi Village",place:"Near Kochi · Day 1 detour",why:"India's first eco-tourism village. Village walks, traditional fishing, and the famous 'glowing backwaters' (bioluminescence) in season.",tip:"Bioluminescence is seasonal and tide-dependent — ask locally the same day. Respect the community; it's a living village.",chips:[["Eco","blue"],["Rare","pink"]]},
+ {emoji:"🌫",name:"Kakkayam Dam",place:"Kozhikode side · optional",why:"Misty reservoir, forested hills, waterfalls and wildlife. A raw, 'Jurassic Park' feel that most itineraries skip.",tip:"Best in early morning. Carry a zoom for wildlife and a wide for landscapes. Roads are narrow — confirm with your driver.",chips:[["Wild","blue"],["Misty","blue"]]},
+ {emoji:"🌾",name:"Illithodu Riverside",place:"Near Kochi · optional",why:"A quiet Periyar riverbank spot — lush, green and peaceful, especially during monsoon.",tip:"Great for a slow walk and birdwatching. A polariser brings out the river reflections.",chips:[["Quiet","blue"],["Birds","blue"]]},
+ {emoji:"⛰",name:"Paithalmala",place:"Kannur · optional",why:"A high-altitude grassland at ~1,300m in the Western Ghats. Misty, trekkable and far less crowded than Munnar.",tip:"Trek early to catch the mist. Sturdy shoes needed; it can rain anytime.",chips:[["Trek","orange"],["Misty","blue"]]}
+];
+
+/* ============================================================
+   Per-day highlight map (quick chips under day header)
+   ============================================================ */
+const dayExtras={
+ 0:{photo:["Fort Kochi fishing nets","Athirappilly falls"],shop:["Jew Town","Broadway"],gem:["Kumbalangi","Kadamakkudy"],lang:["Namaskaram = Hello","Nandi = Thank you"]},
+ 1:{photo:["Kolukkumalai sunrise","Tea gardens"],shop:["Munnar tea outlets"],gem:["Chinnakanal viewpoints"],lang:["Oru chaya venam = Tea, please","Suprabhatham = Good morning"]},
+ 2:{photo:["Vagamon pines","Parunthumpara"],shop:["Thekkady spice market"],gem:["Elaveezhapoonchira (optional)"],lang:["Masala venam = Spices, please","Ruchiyundu = Delicious"]},
+ 3:{photo:["Periyar Lake","Backwaters sunset"],shop:["Mullakkal Street"],gem:["Kumarakom bird sanctuary (optional)"],lang:["Boat venam = Boat, please","Meen venam = Fish, please"]},
+ 4:{photo:["Jatayu sculpture"],shop:["Kollam cashew shops"],gem:["Thangassery Lighthouse"],lang:["Ticket venam = Ticket, please","Kashuvandi venam = Cashews, please"]},
+ 5:{photo:["Varkala cliffs sunset"],shop:["Varkala cliff shops"],gem:["Anchuthengu (optional)"],lang:["Kshetram evide? = Where is the temple?","Suryasthamayam manoharam = Beautiful sunset"]},
+ 6:{photo:["Airport transfer day"],shop:["Last-minute Kochi shopping"],gem:["—"],lang:["Airport venam = Airport, please","Ellathinum nandi = Thanks for everything"]}
+};
+
+let state=loadState(), activeDay=0, toolView="day", modalDay=0;
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function loadState(){return {days:clone(initialDays),checklist:defaultChecklist.map(t=>({text:t,done:false})),expenses:[]}}
+function save(){}
+function money(n){return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(Number(n)||0)}
+function updateStats(){}
+function renderNav(){document.getElementById("dayNav").innerHTML=state.days.map((d,i)=>`<button class="day-btn ${toolView==="day"&&activeDay===i?"active":""}" onclick="openDay(${i})"><span class="day-num">${i+1}</span><span><strong>Day ${i+1}</strong><small>${d.date.split(", ")[1]} · ${d.title.split("→").pop().trim()}</small></span></button>`).join("")}
+function openDay(i){activeDay=i;toolView="day";render();window.scrollTo({top:0,behavior:"smooth"})}
+function showTools(v){toolView=v;render();window.scrollTo({top:0,behavior:"smooth"})}
+
+function parseClock(value){let m=String(value).match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);if(!m)return null;let h=Number(m[1])%12;if(m[3].toUpperCase()==="PM")h+=12;return h*60+Number(m[2])}
+function dateForDay(d){let m=d.date.match(/(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})/);if(!m)return null;return new Date(Number(m[3]),["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].indexOf(m[2]),Number(m[1]))}
+function tripDayIndex(now){let dates=state.days.map(dateForDay);for(let i=0;i<dates.length;i++){let next=new Date(dates[i]);next.setDate(next.getDate()+1);if(now>=dates[i]&&now<next)return i}if(now<dates[0])return 0;return state.days.length-1}
+function updateLiveStatus(){let panel=document.getElementById("livePanel");if(!panel)return;let now=new Date(),d=state.days[activeDay],tripDate=dateForDay(d),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),target=new Date(tripDate.getFullYear(),tripDate.getMonth(),tripDate.getDate());let clock=now.toLocaleString("en-IN",{weekday:"short",day:"2-digit",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:true});let title="",detail="",currentIndex=-1,nextIndex=-1;
+ if(today<target){let days=Math.ceil((target-today)/86400000);title="Your trip is coming up";detail=`Day ${activeDay+1} begins in ${days} day${days===1?"":"s"}. The timetable below shows the planned activities.`}
+ else if(today>target){title="This trip day has ended";detail="You are viewing the published timetable for this date."}
+ else {let mins=now.getHours()*60+now.getMinutes(),times=d.items.map(x=>parseClock(x[0]));for(let i=0;i<times.length;i++){if(times[i]!==null&&times[i]<=mins)currentIndex=i;if(times[i]!==null&&times[i]>mins&&nextIndex===-1)nextIndex=i}
+ if(currentIndex===-1){title="Today's activities have not started";detail=nextIndex>=0?`Next: ${d.items[nextIndex][0]} · ${d.items[nextIndex][1]}`:"Check the timetable for today's plan."}
+ else if(nextIndex===-1){title="Today's scheduled activities are complete";detail="You have reached the last scheduled item for this day. Check the timetable for the full plan.";currentIndex=-1}
+ else {title="Current planned activity";detail=`${d.items[currentIndex][0]} · ${d.items[currentIndex][1]} — ${d.items[currentIndex][3]||d.items[currentIndex][2]}`;detail+=` Next: ${d.items[nextIndex][0]} · ${d.items[nextIndex][1]}.`}
+ }
+ panel.innerHTML=`<div class="live-top"><span class="eyebrow">LIVE TRIP STATUS · DAY ${activeDay+1}</span><span class="live-clock">🕒 ${clock}</span></div><div class="live-current">${esc(title)}</div><div class="live-next">${esc(detail)}</div>`;
+ document.querySelectorAll(".activity-row.current-activity").forEach(x=>x.classList.remove("current-activity"));if(currentIndex>=0&&today.getTime()===target.getTime()){let row=document.getElementById("activity-"+currentIndex);if(row)row.classList.add("current-activity")}
+}
+function render(){renderNav();updateStats();const root=document.getElementById("mainContent");if(toolView==="checklist")return renderChecklist(root);if(toolView==="expenses")return renderExpenses(root);if(toolView==="overview")return renderOverview(root);if(toolView==="photography")return renderPhotography(root);if(toolView==="shopping")return renderShopping(root);if(toolView==="gems")return renderGems(root);if(toolView==="language")return renderLanguage(root);renderDay(root)}
+
+/* ===== day highlights strip ===== */
+function dayHighlights(activeDay){
+ const e=dayExtras[activeDay]; if(!e) return "";
+ const chips=(arr,icon)=>arr.map(x=>`<span class="dh-item">${icon} <b>${esc(x)}</b></span>`).join("");
+ return `<div class="day-highlights no-print"><div class="dh-title">Highlights for this day</div><div class="dh-row">
+   ${chips(e.photo,"📸")}${chips(e.shop,"🛍")}${chips(e.gem,"💎")}${chips(e.lang,"🗣")}
+ </div></div>`;
+}
+
+function renderDay(root){const d=state.days[activeDay];root.innerHTML=`
+ <section class="card day-head"><div class="eyebrow">DAY ${activeDay+1} · ${d.date}</div><h2>${esc(d.title)}</h2><div class="sub">${esc(d.summary)}</div><div class="day-meta"><span class="tag">🛏 ${esc(d.stay)}</span><span class="tag">👥 10 travellers</span><span class="tag">🚐 Urbania</span></div><div class="maplinks" style="margin-top:14px"><a target="_blank" rel="noopener" href="${mapUrl(d)}">Open day route in Google Maps ↗</a><a href="#" onclick="showTools('checklist');return false">Booking checklist</a></div></section>
+ ${dayHighlights(activeDay)}
+ <section class="card live-panel" id="livePanel" aria-live="polite"></section>
+  <section class="card section"><div class="section-head"><h3>Daily timetable</h3><button class="btn small no-print" onclick="window.print()">Print this day</button></div><p class="muted">View the planned activities and timings. This itinerary is maintained by the trip owner.</p>
+  <div class="table-wrap"><table class="schedule"><thead><tr><th>Time</th><th>Place / activity</th><th>Duration / travel</th><th>Notes</th></tr></thead><tbody>${d.items.map((it,j)=>`<tr id="activity-${j}" class="activity-row"><td class="time">${esc(it[0])}</td><td class="place"><strong>${esc(it[1])}</strong></td><td class="duration">${esc(it[2])}</td><td>${esc(it[3])}</td></tr>`).join("")}</tbody></table></div></section>
+  <section class="card section">
+    <div class="section-head">
+      <h3>Day notes · First-time Kerala tips</h3>
+      <span class="tag" style="background:#fdf0e2;color:#a45d20">👋 First visit</span>
+    </div>
+    <div class="readonly-note">${d.notes?esc(d.notes):"No additional notes have been published for this day."}</div>
+    <h3 style="margin-top:18px">Day reminder</h3>
+    <div class="readonly-note">${d.reminder?esc(d.reminder):"No additional reminder has been published for this day."}</div>
+    ${d.firstTimer?`<div class="first-timer-grid">
+      <div class="phrase-card"><div class="en">🤝 Culture</div><div style="font-size:13.5px;color:#4a5a53;margin-top:4px">${esc(d.firstTimer.culture)}</div></div>
+      <div class="phrase-card"><div class="en">🍽 Food</div><div style="font-size:13.5px;color:#4a5a53;margin-top:4px">${esc(d.firstTimer.food)}</div></div>
+    </div>`:""}
+    <p class="muted" style="margin-bottom:0;margin-top:12px">Notes and reminders are maintained by the trip owner and tailored for first-time visitors to Kerala.</p>
+  </section>
+  <div class="note"><b>Planning reminder:</b> Drive durations are estimates. Confirm the actual route, road conditions, opening hours and activity bookings shortly before travel. This itinerary is editable and not a live booking confirmation.</div>`}
+
+function renderPhotography(root){
+ root.innerHTML=`<section class="explore-intro"><div class="eyebrow">📸 EXPLORE GUIDE</div><h2>Photography hotspots</h2><p>Best light, best frames and a quick field tip for every stop on your route. Times refer to the planned day.</p></section>
+ <div class="grid-cards">${photographySpots.map(s=>`
+   <div class="spot-card"><div class="spot-emoji">${s.emoji}</div><h4>${esc(s.name)}</h4><p>${esc(s.why)}</p><div class="spot-meta">${s.chips.map(c=>`<span class="chip ${c[1]}">${esc(c[0])}</span>`).join("")}<span class="chip">${esc(s.place)}</span></div><p style="margin-top:10px;font-size:12.5px;color:#4a5a53"><b>Tip:</b> ${esc(s.tip)}</p></div>`).join("")}</div>
+ <div class="note" style="margin-top:16px"><b>Photography reminder:</b> Light changes fast in the hills and on the coast. Carry a microfibre cloth, spare battery and a small tripod for sunrise/sunset frames.</div>`
+}
+
+function renderShopping(root){
+ root.innerHTML=`<section class="explore-intro"><div class="eyebrow">🛍 EXPLORE GUIDE</div><h2>Where to shop</h2><p>Markets, spice streets and souvenir stops organised by the towns on your itinerary.</p></section>
+ <div class="grid-cards">${shoppingSpots.map(s=>`
+   <div class="spot-card"><div class="spot-emoji">${s.emoji}</div><h4>${esc(s.name)}</h4><p>${esc(s.what)}</p><div class="spot-meta">${s.chips.map(c=>`<span class="chip ${c[1]}">${esc(c[0])}</span>`).join("")}<span class="chip">${esc(s.place)}</span></div><p style="margin-top:10px;font-size:12.5px;color:#4a5a53"><b>Tip:</b> ${esc(s.tip)}</p></div>`).join("")}</div>
+ <div class="note" style="margin-top:16px"><b>Shopping reminder:</b> Bargain politely in local markets. Ask before photographing shopkeepers, and check spice packets are sealed and labelled.</div>`
+}
+
+function renderGems(root){
+ root.innerHTML=`<section class="explore-intro"><div class="eyebrow">💎 EXPLORE GUIDE</div><h2>Hidden gems & offbeat detours</h2><p>Quiet, local and crowd-free — these are the spots most itineraries skip. Treat them as optional add-ons and confirm access locally.</p></section>
+ <div class="grid-cards">${hiddenGems.map(s=>`
+   <div class="spot-card"><div class="spot-emoji">${s.emoji}</div><h4>${esc(s.name)}</h4><p>${esc(s.why)}</p><div class="spot-meta">${s.chips.map(c=>`<span class="chip ${c[1]}">${esc(c[0])}</span>`).join("")}<span class="chip">${esc(s.place)}</span></div><p style="margin-top:10px;font-size:12.5px;color:#4a5a53"><b>Tip:</b> ${esc(s.tip)}</p></div>`).join("")}</div>
+ <div class="note" style="margin-top:16px"><b>Offbeat reminder:</b> These are living communities and protected areas. Carry your waste back, ask before entering private land, and check road/weather conditions with your driver.</div>`
+}
+
+/* ===== NEW: Language view ===== */
+function renderLanguage(root){
+ root.innerHTML=`<section class="explore-intro"><div class="eyebrow">🗣 SPEAK MALAYALAM</div><h2>English → Malayalam phrasebook</h2><p>Everyday phrases grouped by day, so you can greet, shop, eat and thank locals wherever you are. Malayalam script is shown with a simple English pronunciation — say it slowly and smile.</p><div style="margin-top:10px"><span class="lang-badge">Universal greeting: Namaskaram 🙏</span></div></section>
+ ${languageByDay.map(d=>`
+   <section class="card lang-day">
+     <h3>${esc(d.day)}</h3>
+     <div class="lang-sub">${esc(d.sub)}</div>
+     <div class="phrase-grid">${d.phrases.map(p=>`
+       <div class="phrase-card">
+         <div class="en">${esc(p.en)}</div>
+         <div class="ml">${esc(p.ml)}</div>
+         <div class="rom">${esc(p.rom)}</div>
+         <div class="tip">💡 ${esc(p.tip)}</div>
+       </div>`).join("")}</div>
+   </section>`).join("")}
+ <div class="note" style="margin-top:16px"><b>Language reminder:</b> English is widely understood in tourist areas, but Malayalam effort is always appreciated. If you're stuck, say "Kshamikkanam, English?" (Sorry, English?) and someone will help.</div>`
+}
+
+function renderChecklist(root){root.innerHTML=`<section class="card section"><div class="section-head"><div><div class="eyebrow">TRIP PREPARATION</div><h2 style="margin:4px 0">Booking checklist</h2></div><span class="tag">Group reference</span></div><div class="checklist">${state.checklist.map(x=>`<div class="check ${x.done?"done":""}"><span>${x.done?"✓":"○"}</span><span>${esc(x.text)}</span></div>`).join("")}</div><p class="muted">Checklist status is published by the trip owner.</p></section>`}
+function renderExpenses(root){let total=state.expenses.reduce((a,e)=>a+(Number(e.amount)||0),0),per=total/10;root.innerHTML=`<section class="card section"><div class="eyebrow">GROUP BUDGET</div><h2 style="margin:4px 0 14px">Expense tracker</h2><div class="expense-summary"><div><span class="muted">Total expenses</span><br><b>${money(total)}</b></div><div><span class="muted">Per person (10 travellers)</span><br><b>${money(per)}</b></div></div><div class="table-wrap" style="margin-top:15px"><table class="schedule"><thead><tr><th>Expense</th><th>Day</th><th>Amount</th><th>Paid by</th></tr></thead><tbody>${state.expenses.length?state.expenses.map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.day)}</td><td>${money(e.amount)}</td><td>${esc(e.paid)}</td></tr>`).join(""):`<tr><td colspan="4" class="muted">No expenses have been published yet.</td></tr>`}</tbody></table></div><p class="muted">Expense details are maintained by the trip owner.</p></section>`}
+function renderOverview(root){root.innerHTML=`<section class="card section"><div class="eyebrow">ROUTE OVERVIEW</div><h2 style="margin:4px 0 14px">Your Kerala journey</h2><div class="maplinks">${["Kochi Airport","Fort Kochi","Athirappilly","Munnar","Kolukkumalai","Mattupetty Dam","Kundala Lake","Vagamon Pine Forest","Parunthumpara","Thekkady","Periyar Lake","Alleppey","Jatayu Earth's Center","Kollam","Padmanabhaswamy Temple","Kovalam","Varkala","Kochi Airport"].map(p=>`<a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p+", Kerala, India")}">${p} ↗</a>`).join("")}</div><p class="muted" style="margin-top:14px">Open individual place links in Google Maps. The day route link uses the places listed in that day's plan.</p></section>`}
+function mapUrl(d){let places=d.items.map(x=>x[1]).filter(x=>x&&!/breakfast|lunch|dinner|check.in|depart|arrive|flight|return to hotel|rest/i.test(x));let q=places.join(" to ");return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(places[0]||"Kochi, Kerala")+"&destination="+encodeURIComponent(places[places.length-1]||"Kerala")+"&waypoints="+encodeURIComponent(places.slice(1,-1).join("|"))+"&travelmode=driving"}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function attr(s){return esc(s).replace(/`/g,"&#96;")}
+activeDay=tripDayIndex(new Date());
+render();
+setInterval(updateLiveStatus,1000);
+</script>
+</body>
+</html>
