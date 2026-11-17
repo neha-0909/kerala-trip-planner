@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kerala Trip Planner | 18–24 November 2026</title>
+<title>Kerala Travel Itinerary | 18–24 November 2026</title>
 <style>
 :root{--green:#176b55;--green2:#e8f4ef;--ink:#20312d;--muted:#71817b;--cream:#f7f8f4;--line:#e4eae5;--orange:#e58a43;--white:#fff;--shadow:0 8px 28px rgba(28,58,47,.08)}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
@@ -13,6 +13,13 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.hero{background
 .wrap{max-width:1180px;margin:24px auto;padding:0 18px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:18px}.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:10px;padding:9px 13px;font-weight:650}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn.soft{background:var(--green2);color:var(--green);border-color:#d4e9df}.btn.danger{color:#a43c31}.btn.small{padding:6px 9px;font-size:12px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}.panel,.card{background:white;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.sidebar{padding:16px;position:sticky;top:14px}.side-title{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin:2px 0 12px}.day-nav{display:flex;flex-direction:column;gap:6px}.day-btn{border:0;background:transparent;text-align:left;padding:11px;border-radius:11px;color:var(--ink);display:flex;gap:10px;align-items:center}.day-btn.active{background:var(--green2);color:var(--green);font-weight:750}.day-num{width:32px;height:32px;border-radius:9px;background:#f0f3ef;display:grid;place-items:center;font-weight:800;font-size:12px;flex-shrink:0}.day-btn.active .day-num{background:var(--green);color:white}.day-btn small{display:block;color:var(--muted);font-weight:500}.main{min-width:0}.day-head{padding:22px;margin-bottom:14px}.eyebrow{color:var(--green);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.day-head h2{margin:5px 0;font-size:27px}.sub{color:var(--muted)}.day-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tag{background:#f1f5f1;border-radius:99px;padding:6px 10px;font-size:12px;color:#50625a}.section{padding:18px;margin-bottom:14px}.section h3{margin:0 0 14px;font-size:17px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.table-wrap{overflow-x:auto}.schedule{width:100%;border-collapse:collapse;min-width:680px}.schedule th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:9px;border-bottom:1px solid var(--line)}.schedule td{padding:10px 9px;border-bottom:1px solid #edf0ed;vertical-align:top}.schedule tr:last-child td{border-bottom:0}.schedule input,.schedule select{width:100%;min-width:90px;border:1px solid transparent;background:#f7f9f6;border-radius:7px;padding:7px;color:var(--ink)}.schedule input:focus,.schedule select:focus{outline:2px solid #b9dacc;background:white}.schedule .time{min-width:112px}.schedule .place{min-width:145px}.schedule .duration{min-width:90px}.schedule .actions{white-space:nowrap}.muted{color:var(--muted);font-size:12px}.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.check{display:flex;gap:9px;align-items:flex-start;padding:10px;border:1px solid var(--line);border-radius:10px}.check input{accent-color:var(--green);margin-top:4px}.check.done span{text-decoration:line-through;color:#91a098}.progress{height:7px;background:#edf2ee;border-radius:99px;overflow:hidden;margin:8px 0 13px}.progress span{height:100%;display:block;background:var(--green);width:0;transition:width .2s}.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}.mini{padding:15px}.mini b{font-size:22px;display:block}.mini span{color:var(--muted);font-size:12px}.maplinks{display:flex;gap:8px;flex-wrap:wrap}.maplinks a{color:var(--green);background:var(--green2);border-radius:9px;padding:8px 11px;text-decoration:none;font-size:13px;font-weight:650}.expense-row{display:grid;grid-template-columns:1.2fr 1fr .8fr .8fr auto;gap:8px;margin:9px 0}.field{width:100%;padding:9px;border:1px solid var(--line);border-radius:9px;background:white}.expense-summary{display:flex;gap:20px;flex-wrap:wrap;padding:12px;background:#f5f8f5;border-radius:10px;margin-top:12px}.expense-summary b{font-size:18px}.note{background:#fff8ec;border:1px solid #f4e2c6;color:#76552c;padding:12px;border-radius:11px;font-size:13px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:22px}
 .live-panel{padding:17px 20px;margin-bottom:14px;border-left:4px solid var(--green)}.live-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}.live-clock{font-weight:750;color:var(--green);font-variant-numeric:tabular-nums}.live-current{font-size:19px;font-weight:800;margin:8px 0 3px}.live-next{color:var(--muted);font-size:13px}.activity-row.current-activity td{background:#e8f4ef!important}.activity-row.current-activity td:first-child{box-shadow:inset 4px 0 var(--green)}.readonly-note{white-space:pre-wrap;line-height:1.65}.modal-back{position:fixed;inset:0;background:#14231fcc;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal{background:white;border-radius:16px;padding:22px;max-width:480px;width:100%}.modal h3{margin-top:0}.modal .field{margin:6px 0 12px}.hidden{display:none!important}
 /* ===== NEW: Explore views ===== */
+ .hero h1{letter-spacing:-.01em;font-weight:800}
+.hero p{line-height:1.65;font-size:15.5px}
+.hero .pill{letter-spacing:.08em;font-weight:600;text-transform:uppercase}
+.hero .brand{letter-spacing:.06em}
+.hero .stat b{letter-spacing:-.01em}
+.hero .stat span{letter-spacing:.02em;text-transform:uppercase;font-size:11px}
+ 
 .explore-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
 .explore-intro{padding:20px;margin-bottom:14px;background:linear-gradient(120deg,#f1f9f4,#ffffff);border-left:4px solid var(--green)}
 .explore-intro h2{margin:4px 0 6px;font-size:24px}
@@ -53,15 +60,18 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.hero{background
 </head>
 <body>
 <header class="hero">
- <div class="topline"><div class="brand">🌿 KERALA • TRIP PLANNER</div><span class="pill">18–24 NOVEMBER 2026 · 10 TRAVELLERS</span></div>
- <h1>Seven days. One beautiful journey.</h1>
- <p>Itinerary, live trip status, photography hotspots, shopping streets, hidden gems and a first-timer's Malayalam phrasebook — all in one shared plan.</p>
- <div class="hero-stats">
-   <div class="stat"><b>7 days</b><span>18–24 Nov 2026</span></div>
-   <div class="stat"><b>10</b><span>travellers</span></div>
-   <div class="stat"><b>6</b><span>base towns</span></div>
-   <div class="stat"><b>4</b><span>explore guides</span></div>
- </div>
+  <div class="topline">
+    <div class="brand">🌿 KERALA · TRAVEL ITINERARY</div>
+    <span class="pill">18–24 NOVEMBER 2026 · GROUP OF 10</span>
+  </div>
+  <h1>Seven Days Across Kerala</h1>
+  <p>A curated seven-day itinerary spanning Kochi, Munnar, Thekkady, Alleppey, Kollam and Varkala — with a live trip schedule, photography and shopping guides, hidden-gem detours, and a first-timer's Malayalam phrasebook.</p>
+  <div class="hero-stats">
+    <div class="stat"><b>7 Days</b><span>18–24 November 2026</span></div>
+    <div class="stat"><b>10</b><span>Travellers</span></div>
+    <div class="stat"><b>6</b><span>Base Towns</span></div>
+    <div class="stat"><b>4</b><span>Travel Guides</span></div>
+  </div>
 </header>
 <div class="wrap">
  <div class="toolbar no-print">
